@@ -32,7 +32,7 @@ public class SecurityConfig {
         http.csrf(customizer ->customizer.disable());
         http.authorizeHttpRequests(request -> request
                 .requestMatchers("/register","/login").permitAll()
-                .requestMatchers("/addpost","/delete/","/update/").hasRole("COMPANY")
+                .requestMatchers("/addpost","/delete/","/update/","/myposts").hasRole("COMPANY")
                 .requestMatchers("/allposts","/posts/").hasAnyRole("COMPANY","JOBSEEKER")
                 .anyRequest().authenticated());
         http.authenticationProvider(authenticationProvider());

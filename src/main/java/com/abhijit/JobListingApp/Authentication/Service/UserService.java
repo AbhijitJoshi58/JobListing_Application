@@ -1,5 +1,6 @@
 package com.abhijit.JobListingApp.Authentication.Service;
 
+import com.abhijit.JobListingApp.Authentication.Models.UserPrincipal;
 import com.abhijit.JobListingApp.Authentication.Models.Users;
 import com.abhijit.JobListingApp.Authentication.Repository.SecurityRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +36,10 @@ public class UserService {
         Authentication authentication =authmanager
                 .authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword()));
 
-        if(authentication.isAuthenticated())
-            return jwtservice.generatetoken(user.getUsername());
-
+        if(authentication.isAuthenticated()) {
+            UserPrincipal principal = (UserPrincipal) authentication.getPrincipal();
+            return jwtservice.generatetoken(principal);
+        }
         return "failed";
     }
 }

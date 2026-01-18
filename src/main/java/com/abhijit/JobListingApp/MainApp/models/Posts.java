@@ -10,6 +10,7 @@ public class Posts {
     @Id
     private String id;
 
+    private Integer ownerId;
     private String title;
     private String company;
     private String location;
@@ -70,10 +71,19 @@ public class Posts {
     public boolean isRemote() { return remote; }
     public void setRemote(boolean remote) { this.remote = remote; }
 
+    public Integer getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(Integer ownerId) {
+        this.ownerId = ownerId;
+    }
+
     @Override
     public String toString() {
-        return "posts{" +
+        return "Posts{" +
                 "id='" + id + '\'' +
+                ", ownerId=" + ownerId +
                 ", title='" + title + '\'' +
                 ", company='" + company + '\'' +
                 ", location='" + location + '\'' +
