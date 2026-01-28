@@ -53,9 +53,27 @@ MongoDB → Stores job posts
 
 -->System Architecture
 
-React Frontend  →  Spring Boot REST API  →  MySQL (Users)
-                                   ↘
-                                    → MongoDB (Job Posts)
+```text
+                ┌────────────────────┐
+                │     React App      │
+                │   (Frontend UI)    │
+                └─────────┬──────────┘
+                          │ HTTP (Axios)
+                          ▼
+                ┌────────────────────┐
+                │   Spring Boot API  │
+                │   (REST Backend)   │
+                └─────────┬──────────┘
+                          │
+        ┌─────────────────┴─────────────────┐
+        ▼                                   ▼
+┌──────────────────┐              ┌──────────────────┐
+│      MySQL       │              │     MongoDB      │
+│  User Accounts   │              │    Job Posts     │
+│  Roles & Auth    │              │  Job Data Store  │
+└──────────────────┘              └──────────────────┘
+```
+
 
                                     
 
