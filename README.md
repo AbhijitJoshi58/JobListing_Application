@@ -3,6 +3,8 @@
 A full-stack job portal where companies can post job openings and job seekers can browse and search jobs.
 This project demonstrates role-based authentication, secure REST APIs, and integration of SQL + NoSQL databases in a real-world application architecture.
 
+
+
 --> Project Goal
 
 This project was built to practice and demonstrate:
@@ -11,6 +13,8 @@ Role-based access control (COMPANY vs JOB SEEKER)
 Full-stack integration between React frontend and Spring Boot backend
 Using MySQL for relational user data and MongoDB for job post storage
 Designing a production-style REST API
+
+
 
 -->Features
 
@@ -31,6 +35,8 @@ Delete job posts (owner-only access)
 View all job listings
 Search jobs by keyword
 
+
+
 --> Tech Stack
 ->Frontend
 
@@ -50,6 +56,9 @@ Spring Data MongoDB
 
 MySQL → Stores user credentials and roles
 MongoDB → Stores job posts
+
+
+
 
 -->System Architecture
 
