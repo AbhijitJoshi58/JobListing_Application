@@ -61,21 +61,26 @@ React Frontend  →  Spring Boot REST API  →  MySQL (Users)
 
 -->Project Structure
 
+```text
 JobListing_Application
 │
 ├── backend
-│ ├── auth # Security, JWT, login & registration
-│ ├── controller # REST API endpoints
-│ ├── service # Business logic
-│ ├── repository # Database access layer
-│ ├── model # Entity and document classes
-│ └── resources # application.properties
+│   ├── auth        - Security, JWT, login & registration
+│   ├── controller  - REST API endpoints
+│   ├── service     - Business logic
+│   ├── repository  - Database access layer
+│   ├── model       - Entity & document classes
+│   └── resources   - application.properties
 │
 ├── frontend
-│ ├── pages # Application screens (Login, Register, Dashboards)
-│ ├── components # Reusable UI components
-│ ├── api # Axios configuration
-│ └── auth # Route protection logic
+│   ├── pages       - Application screens
+│   ├── components  - Reusable UI parts
+│   ├── api         - Axios configuration
+│   └── auth        - Route protection logic
+│
+└── screenshots     - README images
+```
+
 
 
 
