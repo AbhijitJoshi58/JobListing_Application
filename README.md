@@ -77,8 +77,7 @@ JobListing_Application
 │   ├── components  - Reusable UI parts
 │   ├── api         - Axios configuration
 │   └── auth        - Route protection logic
-│
-└── screenshots     - README images
+
 ```
 
 
