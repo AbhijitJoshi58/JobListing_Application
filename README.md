@@ -163,10 +163,15 @@ Environment variables are used for secure configuration in production.
 -->Future Improvements
 
 Job application system
+
 Resume upload & parsing
+
 Advanced search filters (location, salary, skills)
+
 Pagination for job listings
+
 Admin dashboard
+
 Email notifications
 
 
