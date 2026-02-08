@@ -1,7 +1,8 @@
---> Job Listing Application
+--> HireNetwork (Job Portal Application)
 
 A full-stack job portal where companies can post job openings and job seekers can browse and search jobs.
 This project demonstrates role-based authentication, secure REST APIs, and integration of SQL + NoSQL databases in a real-world application architecture.
+https://hirenetwork.netlify.app
 
 
 
@@ -24,36 +25,32 @@ JWT-based authentication
 Role-based access control
 
 ->Company Role
-
 Create job posts
 View only their own job listings
 Update job posts
 Delete job posts (owner-only access)
 
 -> Job Seeker Role
-
 View all job listings
 Search jobs by keyword
 
 
 
 --> Tech Stack
-->Frontend
 
+->Frontend
 React (Vite)
 React Router
 Axios
 CSS
 
 ->Backend
-
 Spring Boot
 Spring Security + JWT
 Spring Data JPA (MySQL)
 Spring Data MongoDB
 
 ->Databases
-
 MySQL → Stores user credentials and roles
 MongoDB → Stores job posts
 
@@ -116,24 +113,7 @@ JobListing_Application
 Java 21
 Maven
 MySQL Server
-MongoDB (Atlas)   
-
-
-                                    
-# MongoDB
-spring.data.mongodb.uri=YOUR_MONGODB_URI
-spring.data.mongodb.database=JobListing
-
-# MySQL
-spring.datasource.url=jdbc:mysql://localhost:3306/LoginDetails
-spring.datasource.username=YOUR_USERNAME
-spring.datasource.password=YOUR_PASSWORD
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-# JWT Secret
-jwt.secret=YOUR_SECRET_KEY
+MongoDB (Atlas)  
 
 
 
@@ -143,6 +123,22 @@ Backend generates a JWT token
 Frontend stores the token
 Token sent in request header
 Backend validates token and role before granting access
+
+-->Deplpyment Details
+The application is deployed using cloud platforms and containerization.
+
+Frontend: Hosted on Netlify
+
+Backend: Dockerized Spring Boot service deployed on Render
+
+Database:
+
+MongoDB Atlas (Job listings)
+
+MySQL on Railway (User data)
+
+Environment variables are used for secure configuration in production.
+
 
 
 | Method | Endpoint    | Description                    |
