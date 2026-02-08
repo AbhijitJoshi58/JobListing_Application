@@ -109,6 +109,7 @@ JobListing_Application
 
 
 -->Backend Setup (Spring Boot)
+
 ->Prerequisites
 Java 21
 Maven
@@ -118,11 +119,19 @@ MongoDB (Atlas)
 
 
 -->Authentication Flow
+
 User registers or logs in
+
 Backend generates a JWT token
+
 Frontend stores the token
+
 Token sent in request header
+
 Backend validates token and role before granting access
+
+
+
 
 -->Deployment Details
 
