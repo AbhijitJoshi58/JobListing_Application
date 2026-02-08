@@ -125,6 +125,7 @@ Token sent in request header
 Backend validates token and role before granting access
 
 -->Deployment Details
+
 The application is deployed using cloud platforms and containerization.
 
 Frontend: Hosted on Netlify
